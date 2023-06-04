@@ -1,0 +1,56 @@
+version: "3"
+
+services:
+  bank1:
+    build: src/bank/
+    container_name: bank1
+    hostname: bank1
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      BANK_ID: 1
+    depends_on:
+      - boerse
+
+  bank2:
+    build: src/bank/
+    container_name: bank2
+    hostname: bank2
+    restart: always
+    ports:
+      - "8001:8000"
+    environment:
+      BANK_ID: 2
+    depends_on:
+      - boerse
+
+  bank3:
+    build: src/bank/
+    container_name: bank3
+    hostname: bank3
+    restart: always
+    ports:
+      - "8002:8000"
+    environment:
+      BANK_ID: 3
+    depends_on:
+      - boerse
+
+  bank4:
+    build: src/bank/
+    container_name: bank4
+    hostname: bank4
+    restart: always
+    ports:
+      - "8003:8000"
+    environment:
+      BANK_ID: 4
+    depends_on:
+      - boerse
+
+  boerse:
+    build: src/boerse/
+    container_name: boerse
+    hostname: boerse
+    restart: always

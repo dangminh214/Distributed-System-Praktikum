@@ -1,0 +1,156 @@
+{
+  "banks": [
+    {
+      "id": 1,
+      "name": "bank1",
+      "amount_bank": 1000,
+      "credits": 0.0,
+      "stocks": [
+        {
+          "stock_name": "Coca-Cola",
+          "amount": 150.0,
+          "price": 100.0
+        },
+        {
+          "stock_name": "META",
+          "amount": 50.0,
+          "price": 500.0
+        },
+        {
+          "stock_name": "Apple",
+          "amount": 30.0,
+          "price": 2000.0
+        },
+        {
+          "stock_name": "Alibaba",
+          "amount": 200.0,
+          "price": 150.0
+        },
+        {
+          "stock_name": "Alphabet",
+          "amount": 150.0,
+          "price": 250.0
+        },
+        {
+          "stock_name": "Tesla",
+          "amount": 50.0,
+          "price": 700.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "bank2",
+      "amount_bank": 2000,
+      "credits": 0.0,
+      "stocks": [
+        {
+          "stock_name": "Coca-Cola",
+          "amount": 450.0,
+          "price": 100.0
+        },
+        {
+          "stock_name": "META",
+          "amount": 250.0,
+          "price": 500.0
+        },
+        {
+          "stock_name": "Apple",
+          "amount": 90.0,
+          "price": 2000.0
+        },
+        {
+          "stock_name": "Alibaba",
+          "amount": 20.0,
+          "price": 150.0
+        },
+        {
+          "stock_name": "Alphabet",
+          "amount": 100.0,
+          "price": 250.0
+        },
+        {
+          "stock_name": "Tesla",
+          "amount": 50.0,
+          "price": 700.0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "bank3",
+      "amount_bank": 3000,
+      "credits": 0.0,
+      "stocks": [
+        {
+          "stock_name": "Coca-Cola",
+          "amount": 50.0,
+          "price": 100.0
+        },
+        {
+          "stock_name": "META",
+          "amount": 100.0,
+          "price": 500.0
+        },
+        {
+          "stock_name": "Apple",
+          "amount": 150.0,
+          "price": 2000.0
+        },
+        {
+          "stock_name": "Alibaba",
+          "amount": 250.0,
+          "price": 150.0
+        },
+        {
+          "stock_name": "Alphabet",
+          "amount": 350.0,
+          "price": 250.0
+        },
+        {
+          "stock_name": "Tesla",
+          "amount": 250.0,
+          "price": 700.0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "bank4",
+      "amount_bank": 0,
+      "credits": 0.0,
+      "stocks": [
+        {
+          "stock_name": "Coca-Cola",
+          "amount": 150.0,
+          "price": 100.0
+        },
+        {
+          "stock_name": "META",
+          "amount": 150.0,
+          "price": 500.0
+        },
+        {
+          "stock_name": "Apple",
+          "amount": 30.0,
+          "price": 2000.0
+        },
+        {
+          "stock_name": "Alibaba",
+          "amount": 200.0,
+          "price": 150.0
+        },
+        {
+          "stock_name": "Alphabet",
+          "amount": 150.0,
+          "price": 250.0
+        },
+        {
+          "stock_name": "Tesla",
+          "amount": 50.0,
+          "price": 700.0
+        }
+      ]
+    }
+  ]
+}
