@@ -29,7 +29,6 @@ def setup_logger():
     handler.setFormatter(formatter)
     root.addHandler(handler)
 
-
 # UDP-Socket-Kommunikation behandeln
 def main():
     setup_logger()
@@ -77,7 +76,6 @@ def main():
         except:
             logging.info("Error sending message")
             exit(-1)
-
 
 if __name__ == "__main__":
     main()
