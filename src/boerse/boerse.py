@@ -5,7 +5,6 @@ import random
 import socket
 import time
 
-BANK_IP = "bank"
 UDP_PORT = 5000
 IP = "bank"
 
@@ -18,6 +17,7 @@ stocks = {
     "Tesla": 700.00,
 }
 
+
 # Logger für die Ausgabe von Informationen und Fehlern einrichten
 def setup_logger():
     root = logging.getLogger()
@@ -25,15 +25,18 @@ def setup_logger():
 
     handler = logging.StreamHandler(sys.stdout)
     handler.setLevel(logging.DEBUG)
-    formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
+    formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
     handler.setFormatter(formatter)
     root.addHandler(handler)
+
 
 # UDP-Socket-Kommunikation behandeln
 def main():
     setup_logger()
 
     logging.info("UDP target port: %s" % UDP_PORT)
+
+    number_of_banks = int(os.environ.get("num_Banks"))
 
     msg_count = 0
     start_time = time.time()
@@ -58,16 +61,16 @@ def main():
             # Senden der Nachricht an alle Banken mittels UDP
             sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
-            for i in range(0, 4):
+            for i in range(0, number_of_banks):
                 # udp-socket sendet an alle Banken die Nachricht
-                sock.sendto(message.encode("utf-8"), (IP + str(i + 1), UDP_PORT + i))
+                sock.sendto(message.encode('utf-8'), (IP + str(i + 1), UDP_PORT + i))
 
             # logging.info(f"Sent: {message}")
             msg_count += 1
             elapsed_time = time.time() - start_time
 
             # Durchsatz berechnen - für Performance-Tests
-            if elapsed_time >= 10:
+            if elapsed_time >= 5:
                 throughput = msg_count / elapsed_time
                 throughput = round(throughput, 2)
                 logging.info(f"Throughput: {throughput} msg/s. Messages sent: {msg_count}")
@@ -77,5 +80,9 @@ def main():
             logging.info("Error sending message")
             exit(-1)
 
+
 if __name__ == "__main__":
     main()
+
+
+

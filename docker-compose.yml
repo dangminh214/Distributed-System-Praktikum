@@ -10,6 +10,7 @@ services:
       - "8000:8000"
     environment:
       BANK_ID: 1
+      BANKS: "bank2, bank3, bank4"
     depends_on:
       - boerse
 
@@ -22,6 +23,7 @@ services:
       - "8001:8000"
     environment:
       BANK_ID: 2
+      BANKS: "bank1, bank3, bank4"
     depends_on:
       - boerse
 
@@ -34,6 +36,7 @@ services:
       - "8002:8000"
     environment:
       BANK_ID: 3
+      BANKS: "bank1, bank2, bank4"
     depends_on:
       - boerse
 
@@ -46,6 +49,7 @@ services:
       - "8003:8000"
     environment:
       BANK_ID: 4
+      BANKS: "bank1, bank2, bank3"
     depends_on:
       - boerse
 
@@ -53,4 +57,6 @@ services:
     build: src/boerse/
     container_name: boerse
     hostname: boerse
+    environment:
+      num_Banks: 4
     restart: always
