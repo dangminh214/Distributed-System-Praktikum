@@ -51,8 +51,7 @@ public class Bank extends Thread implements Establisher {
     private boolean check;
 
     public Bank(String name, int port, int httpPort) throws IOException {
-        this.startTimes = new HashMap<>(); // Add this line
-
+        this.startTimes = new HashMap<>();
         this.HTTP_DEFAULT_PORT = httpPort;
         this.bankName = name;
         this.currentValue = 0;
@@ -129,14 +128,12 @@ public class Bank extends Thread implements Establisher {
             if(!name.equals(bankName)){
                 this.setCurrentValue(this.getCurrentValue()-this.amount);
                 System.out.println("Current value: "+ this.getCurrentValue());
-                   // Get the start time for the current bank
             long startTime = startTimes.getOrDefault(name, 0L);
-            
-            // Calculate the elapsed time
+
             long endTime = System.nanoTime();
-            long elapsedTime = endTime - startTime;
+            long rescueTime = endTime - startTime;
             
-            System.out.println("Elapsed time: " + (elapsedTime ) + " s");
+            System.out.println("Time to rescue Bank: " + (rescueTime ) + " s");
             }
           
             }
@@ -149,8 +146,6 @@ public class Bank extends Thread implements Establisher {
             startTimes.put(name, System.nanoTime());
             this.amount= Integer.parseInt(money)/2;
             sendMQTTMessage(COMMIT_TOPIC, name +";"+(amount< this.getCurrentValue()?"true":"false"));
-        /*  this.setCurrentValue(this.getCurrentValue()-this.amount);
-            System.out.println("Current value: "+ this.getCurrentValue());*/  
         }
     }
 
@@ -166,7 +161,6 @@ public class Bank extends Thread implements Establisher {
                 sendMQTTMessage(FINISH_TOPIC, name);
                 respones=0;
             }
-        
         }
     }
 
@@ -212,8 +206,7 @@ public class Bank extends Thread implements Establisher {
         try {
             while (running) {
                 if(this.getCurrentValue()<0){
-                        System.out.println("BANKRUPT!!!!!!!!!!");
-;
+                        System.out.println("------------------------------BANKRUPT!!!!!!!!!!-------------------------");
                         String amount = String.valueOf(this.getCurrentValue());
                         sendMQTTMessage(PREPARE_TOPIC,this.bankName+";"+amount);
                 }
@@ -221,11 +214,9 @@ public class Bank extends Thread implements Establisher {
                 this.bankClient = new BankClient(client, this);
                 this.bankClient.start();
             }
-            System.out.println("Bank stop working");
+            System.out.println("Bank stops working");
         } catch (Exception ignored) {
         }
-
-
     }
     private void sendMQTTMessage(String topic, String mess){
         System.out.println("Send mqtt from Bank with message "+ mess +" with topic "+ topic );
@@ -264,7 +255,6 @@ public class Bank extends Thread implements Establisher {
                     System.out.println(hostRpc+ " success to rescue");
                     this.setCurrentValue(0);
                     allDenied = false;
-
                     break;
                 }
                 else if(response.equals(LoanResponse.DENIED)){
@@ -277,12 +267,10 @@ public class Bank extends Thread implements Establisher {
             catch (Exception e){
                 e.printStackTrace();
             }
-
         }
         if(allDenied){
             setBankrupt(true);
         }
-
     }
 
     public HashMap<Code, Message> getSavedMessage() {
@@ -331,7 +319,4 @@ public class Bank extends Thread implements Establisher {
             }
         return socket;
     }
-
-
-
 }

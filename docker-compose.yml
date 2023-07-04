@@ -1,62 +1,98 @@
 version: "3"
-
 services:
+  borse1:
+    build:
+      context: .
+      dockerfile: src/main/java/borse/Dockerfile
+    container_name: "borse1"
+    depends_on:
+      - bank1
+      - bank2
+      - bank3
+    entrypoint:
+      [
+        "java",
+        "-jar",
+        "app.jar",
+        "bank1",
+        "1234",
+        "bank2",
+        "1235",
+        "bank3",
+        "1236",
+        "borse1",
+      ]
+  borse2:
+    build:
+      context: .
+      dockerfile: src/main/java/borse/Dockerfile
+    container_name: "borse2"
+    depends_on:
+      - bank1
+      - bank2
+      - bank3
+    entrypoint:
+      [
+        "java",
+        "-jar",
+        "app.jar",
+        "bank1",
+        "1234",
+        "bank2",
+        "1235",
+        "bank3",
+        "1236",
+        "borse2",
+      ]
+
   bank1:
-    build: src/bank/
-    container_name: bank1
-    hostname: bank1
-    restart: always
+    build:
+      context: .
+      dockerfile: src/main/java/bank/Dockerfile
+    container_name: "bank1"
+    expose:
+      - "8080"
     ports:
-      - "8000:8000"
+      - "8080:8080"
     environment:
-      BANK_ID: 1
-      BANKS: "bank2, bank3, bank4"
+      - RPCBANKS=bank2:3001,bank3:3002
+      - RPCPORT=3000
     depends_on:
-      - boerse
+      - broker
 
+    entrypoint: ["java", "-jar", "app.jar", "bank1", "1234", "8080"]
   bank2:
-    build: src/bank/
-    container_name: bank2
-    hostname: bank2
-    restart: always
+    build:
+      context: .
+      dockerfile: src/main/java/bank/Dockerfile
+    container_name: "bank2"
+    expose:
+      - "8081"
     ports:
-      - "8001:8000"
+      - "8081:8081"
     environment:
-      BANK_ID: 2
-      BANKS: "bank1, bank3, bank4"
+      - RPCBANKS=bank1:3000,bank3:3002
+      - RPCPORT=3001
     depends_on:
-      - boerse
-
+      - broker
+    entrypoint: ["java", "-jar", "app.jar", "bank2", "1235", "8081"]
   bank3:
-    build: src/bank/
-    container_name: bank3
-    hostname: bank3
-    restart: always
+    build:
+      context: .
+      dockerfile: src/main/java/bank/Dockerfile
+    container_name: "bank3"
+    expose:
+      - "8082"
     ports:
-      - "8002:8000"
+      - "8082:8082"
     environment:
-      BANK_ID: 3
-      BANKS: "bank1, bank2, bank4"
+      - RPCBANKS=bank1:3000,bank2:3001
+      - RPCPORT=3002
     depends_on:
-      - boerse
-
-  bank4:
-    build: src/bank/
-    container_name: bank4
-    hostname: bank4
-    restart: always
-    ports:
-      - "8003:8000"
-    environment:
-      BANK_ID: 4
-      BANKS: "bank1, bank2, bank3"
-    depends_on:
-      - boerse
-
-  boerse:
-    build: src/boerse/
-    container_name: boerse
-    hostname: boerse
-    environment:
-      num_Banks: 4
-    restart: always
+      - broker
+    entrypoint: ["java", "-jar", "app.jar", "bank3", "1236", "8082"]
+  broker:
+    build:
+      context: .
+      dockerfile: src/main/mqtt/Dockerfile
+    container_name: "broker"

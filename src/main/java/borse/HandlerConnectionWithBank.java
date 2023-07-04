@@ -6,7 +6,7 @@ import java.net.DatagramSocket;
 import java.net.InetAddress;
 
 
-public class BankHandler {
+public class HandlerConnectionWithBank {
 
     private static final int BUFFER_SIZE = 256;
     private static final int TIMEOUT_IN_MS = 1000;
@@ -17,9 +17,9 @@ public class BankHandler {
 
     private final DatagramSocket receiver;
 
-    public BankHandler(InetAddress sensorAddress, int sensorPort, DatagramSocket receiver) {
-        address = sensorAddress;
-        port = sensorPort;
+    public HandlerConnectionWithBank(InetAddress bankAddress, int bankPort, DatagramSocket receiver) {
+        address = bankAddress;
+        port = bankPort;
         this.receiver = receiver;
     }
 

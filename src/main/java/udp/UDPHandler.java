@@ -59,7 +59,6 @@ public abstract class UDPHandler extends Thread {
                 lostPackets++;
             }
             sentPackets++;
-
         }
         receiver.close();
     }

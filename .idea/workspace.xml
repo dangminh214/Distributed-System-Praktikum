@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fa1535fb-6775-4209-a5a6-42539c40d955" name="Changes" comment="Java Version">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Team-Mo3-Y-D.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Praktikum/P1/P1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Praktikum/P1/Screenshot 10Sek.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Praktikum/P1/Screenshot 5Sek.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Praktikum/P2/P2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Praktikum/P2/get_performance1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Praktikum/P2/gets.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Praktikum/P2/messwerte.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Praktikum/P2/post_performance1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Praktikum/P2/posts.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Praktikum/P3/P3.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bank/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bank/bank.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bank/bankData.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bank/bank_rpc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bank/config_bank.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bank/gen/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bank/gen/bank/RPCBankService-remote" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bank/gen/bank/RPCBankService.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bank/gen/bank/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bank/gen/bank/constants.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bank/gen/bank/ttypes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bank/http_parser.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bank/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/boerse/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/boerse/boerse.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bank/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bank/Bank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/borse/BankHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/borse/HandlerConnectionWithBank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/borse/Borse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/borse/Borse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/borse/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/borse/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/borse/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/borse/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/udp/UDPHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/udp/UDPHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/thrift/bank.thrift" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2S7NBXjKjMTmrKwxExIC2EkRZuZ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Team-Mo3-Y-D" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Team-Mo3-Y-D" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fa1535fb-6775-4209-a5a6-42539c40d955" name="Changes" comment="" />
+      <created>1688493524976</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1688493524976</updated>
+      <workItem from="1688493526731" duration="4785000" />
+    </task>
+    <task id="LOCAL-00001" summary="Java Version">
+      <created>1688493616356</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1688493616356</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Java Version" />
+    <option name="LAST_COMMIT_MESSAGE" value="Java Version" />
+  </component>
+</project>

@@ -29,7 +29,7 @@ public class Message {
     this.price = price;
   }
   public Message(){
-    this.price = RandomDataGenForMsg.getData(200,300);
+    this.price = RandomDataGenForMsg.getData(100,300);
     this.code = Code.values()[ RandomDataGenForMsg.getData(0, Code.values().length-1)];
     this.quantity = RandomDataGenForMsg.getData(-10,50);
   }

@@ -1,8 +1,15 @@
-# Verteilte Systeme Praktikum
+# Aufgabe 1 UDP 
+![img_6.png](img_6.png)
+# Aufgabe 2 HTTP mit POST und GET 
+![img.png](img.png)
+![img_7.png](img_7.png)![img_8.png](img_8.png)
 
-## Dokumentation
-Hier sind die Links zu den entsprechenden Dokumentationen der einzelnen Praktikas mit den jeweiligen Messprotokollen:
-* [Dokumentation Praktikum 1](./src/Praktikum/P1/P1.md) -> UDP Börse - Bank
-* [Dokumentation Praktikum 2](./src/Praktikum/P2/P2.md) -> TCP Sockets und HTTP
-* [Dokumentation Praktikum 3](./src/Praktikum/P3/P3.md) -> Remote Procedure Calls (RPC)
+![img_1.png](img_1.png)
+# Aufgabe 3 RPC 
+![img_10.png](img_10.png)
+![img_11.png](img_11.png)
+# Aufgabe 4 MQTT 
 
+Initial 
+![img_4.png](img_4.png)
+![img_2.png](img_2.png)
